@@ -1,0 +1,8 @@
+module:com.javafxstore
+com.javafxstore
+com.javafxstore.admin
+com.javafxstore.category
+com.javafxstore.product
+com.javafxstore.store
+com.javafxstore.user
+com.javafxstore.utils

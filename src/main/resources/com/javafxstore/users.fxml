@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="555.0" prefWidth="584.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafxstore.user.UsersController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="68.0" layoutX="-6.0" layoutY="-14.0" stroke="TRANSPARENT" strokeType="INSIDE" width="593.0" />
+      <Label layoutX="69.0" layoutY="74.0" prefHeight="34.0" prefWidth="57.0" text="User ID" textFill="#727272">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="120.0" prefHeight="34.0" prefWidth="49.0" text="Name" textFill="#727272">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="291.0" layoutY="74.0" prefHeight="34.0" prefWidth="71.0" text="Password" textFill="#727272">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName" layoutX="127.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" promptText="e.g. name@example.com" />
+      <TextField fx:id="userUser" layoutX="129.0" layoutY="124.0" prefHeight="25.0" prefWidth="149.0" promptText="e.g. John Smith" />
+      <PasswordField fx:id="userPass" layoutX="368.0" layoutY="78.0" />
+      <TextField fx:id="userRole" layoutX="368.0" layoutY="124.0" prefHeight="25.0" prefWidth="149.0" promptText="user/admin" />
+      <Button fx:id="add" layoutY="480.0" mnemonicParsing="false" onAction="#addUser" prefHeight="75.0" prefWidth="157.0" text="Add">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="edit" layoutX="157.0" layoutY="480.0" mnemonicParsing="false" onAction="#editUser" prefHeight="75.0" prefWidth="140.0" text="Edit">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="delete" layoutX="297.0" layoutY="480.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="75.0" prefWidth="140.0" text="Delete">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="update" layoutX="297.0" layoutY="480.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="75.0" prefWidth="140.0" text="Update">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="cancel" layoutX="437.0" layoutY="480.0" mnemonicParsing="false" onAction="#cancelEdit" prefHeight="75.0" prefWidth="149.0" text="Cancel">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="clear" layoutX="437.0" layoutY="480.0" mnemonicParsing="false" onAction="#removeAllUsers" prefHeight="75.0" prefWidth="149.0" text="Clear">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <TableView fx:id="tableView" layoutY="203.0" prefHeight="277.0" prefWidth="584.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="168.66665649414062" text="ID" />
+            <TableColumn fx:id="name" prefWidth="168.66668701171875" text="Name" />
+            <TableColumn fx:id="pass" minWidth="0.0" prefWidth="171.33331298828125" text="Password" />
+            <TableColumn fx:id="role" minWidth="0.0" prefWidth="74.6666259765625" text="Role" />
+         </columns>
+      </TableView>
+      <Label layoutX="230.0" layoutY="12.0" text="Manage Users" textFill="#5e5e5e">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="120.0" prefHeight="34.0" prefWidth="37.0" text="Role" textFill="#727272">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="addUserError" alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="170.0" prefHeight="17.0" prefWidth="306.0" textAlignment="CENTER" textFill="RED" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="796.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafxstore.store.StoreController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="52.0" layoutX="-4.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="101.0" layoutY="424.0" stroke="TRANSPARENT" strokeType="INSIDE" width="796.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="105.0" layoutX="398.0" layoutY="420.0" stroke="#ffffff00" strokeType="INSIDE" width="3.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="55.0" layoutX="398.0" layoutY="-1.0" stroke="#ffffff00" strokeType="INSIDE" width="3.0" />
+      <Button fx:id="add" layoutX="-4.0" layoutY="424.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="101.0" prefWidth="402.0" text="Add to Cart ➤" textFill="#727272">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="clear" layoutX="516.0" layoutY="424.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="101.0" prefWidth="127.0" text="Clear Cart" textFill="#727272">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="checkout" layoutX="643.0" layoutY="424.0" mnemonicParsing="false" onAction="#completeCheckout" prefHeight="101.0" prefWidth="153.0" text="Checkout 🛒" textFill="#727272">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <TableView fx:id="productView" layoutY="51.0" prefHeight="371.0" prefWidth="399.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="285.33335876464844" text="Name" />
+          <TableColumn fx:id="price" prefWidth="54.6666259765625" text="Price" />
+            <TableColumn fx:id="quantity" prefWidth="57.33331298828125" text="In-Stock" />
+        </columns>
+      </TableView>
+      <TableView fx:id="cartView" layoutX="400.0" layoutY="51.0" prefHeight="371.0" prefWidth="393.0">
+        <columns>
+          <TableColumn fx:id="cartName" prefWidth="273.3333435058594" text="Name" />
+          <TableColumn fx:id="cartPrice" prefWidth="53.33331298828125" text="Price" />
+            <TableColumn fx:id="cartQty" prefWidth="62.66668701171875" text="In-Stock" />
+        </columns>
+      </TableView>
+      <Label layoutX="412.0" layoutY="440.0" prefHeight="17.0" prefWidth="52.0" text="Subtotal:" textFill="#727272">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="430.0" layoutY="491.0" text="Total:" textFill="#727272">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="161.0" layoutY="10.0" text="Products" textFill="#5e5e5e">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="10.0" text="Shopping Cart" textFill="#5e5e5e">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subtotal" layoutX="466.0" layoutY="440.0" text="\$0.00" textFill="#727272">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label fx:id="total" layoutX="467.0" layoutY="491.0" text="\$0.00" textFill="#727272">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="426.0" layoutY="465.0" text="Taxes:   13%" textFill="#727272">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
